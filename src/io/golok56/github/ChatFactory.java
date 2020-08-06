@@ -4,9 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ChatFactory {
-    private Map<String, Chat> cache = new HashMap<>();
+    private static Map<String, Chat> cache = new HashMap<>();
 
-    public Chat createChat(String intent) {
+    public static Chat createChat(String intent) {
         Chat chat = cache.get(intent);
         if (chat == null) {
             switch (intent) {
